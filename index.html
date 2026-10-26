@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amy Runs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-app">
+        
+        <!-- CANVAS DISPLAY -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- TOP HUD -->
+        <div id="hud">
+            <div class="hud-card">
+                <span class="hud-icon">💎</span>
+                <span id="gems-display">0</span>
+            </div>
+            <div class="hud-card">
+                <span class="hud-icon">🏃‍♀️</span>
+                <span id="score-display">0 m</span>
+            </div>
+        </div>
+
+        <!-- MAIN MENU OVERLAY -->
+        <div id="menu-overlay" class="overlay">
+            <div class="brand-box">
+                <h1 class="game-title">Amy Runs</h1>
+                <p class="game-subtitle">Lagos Edition 🌴</p>
+            </div>
+
+            <div class="character-preview-card">
+                <div id="preview-avatar" class="avatar-outfit-1"></div>
+                <div class="outfit-title" id="current-outfit-name">Lagos Chic</div>
+            </div>
+
+            <div class="button-group">
+                <button id="start-btn" class="pink-btn">RUN NOW 🏃‍♀️</button>
+                <button id="closet-btn" class="white-outline-btn">CLOSET 👗</button>
+            </div>
+        </div>
+
+        <!-- CLOSET OVERLAY -->
+        <div id="closet-overlay" class="overlay hidden">
+            <h2 class="overlay-title">Amy's Wardrobe</h2>
+            
+            <div class="outfit-grid">
+                <div class="outfit-card selected" data-outfit="1" data-name="Lagos Chic" data-cost="0">
+                    <div class="outfit-thumb thumb-1"></div>
+                    <p class="outfit-label">Lagos Chic</p>
+                    <span class="status-tag">Equipped</span>
+                </div>
+                <div class="outfit-card" data-outfit="2" data-name="Ankara Glam" data-cost="50">
+                    <div class="outfit-thumb thumb-2"></div>
+                    <p class="outfit-label">Ankara Glam</p>
+                    <span class="status-tag">💎 50</span>
+                </div>
+                <div class="outfit-card" data-outfit="3" data-name="Y2K Pink" data-cost="100">
+                    <div class="outfit-thumb thumb-3"></div>
+                    <p class="outfit-label">Y2K Pink</p>
+                    <span class="status-tag">💎 100</span>
+                </div>
+            </div>
+
+            <button id="close-closet-btn" class="pink-btn">SAVE & BACK</button>
+        </div>
+
+        <!-- GAME OVER OVERLAY -->
+        <div id="gameover-overlay" class="overlay hidden">
+            <h2 class="gameover-title">Trip Over!</h2>
+            <div class="stats-card">
+                <p>Distance Run: <b id="final-score">0 m</b></p>
+                <p>Gems Collected: <b id="final-gems">0 💎</b></p>
+            </div>
+            <div class="button-group">
+                <button id="restart-btn" class="pink-btn">RUN AGAIN 🔄</button>
+                <button id="menu-btn" class="white-outline-btn">MAIN MENU 🏠</button>
+            </div>
+        </div>
+
+        <!-- ON-SCREEN MOBILE CONTROLS -->
+        <div id="mobile-controls">
+            <button id="btn-left" class="ctrl-btn">◀</button>
+            <button id="btn-jump" class="ctrl-btn action-btn">JUMP ⬆</button>
+            <button id="btn-slide" class="ctrl-btn action-btn">SLIDE ⬇</button>
+            <button id="btn-right" class="ctrl-btn">▶</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
